@@ -1,0 +1,52 @@
+Problème 1
+
+Algorithme Somme_elements_differents
+
+variables
+    tableau liste_a : entier
+    tableau liste_b : entier
+    S : entier
+    s <- 0
+    i,j : entier
+
+pour i <- 0 à liste_a.taille - 1 faire
+    pour j <- 0 à liste_b.taille - 1 faire
+        si liste_a[i] = liste_b[j] alors
+            j++
+        fin si
+    fin pour
+    S <- S + liste_a[i]
+    i++
+fin pour
+
+pour i <- 0 à liste_b.taille - 1 faire
+    pour j <- 0 à liste_a.taille - 1 faire
+        si liste_b[i] = liste_a[j] alors
+            j++
+        fin si
+    fin pour
+    S <- S + liste_b[i]
+    i++
+fin pour
+
+Retourner S
+
+Problème 2
+
+Algorithme dot_product
+
+variables 
+    ps, i, j : entier
+    tableau v1 : entier
+    tableau v2 : entier
+
+pour i <- 0 à v1.taille - 1 et 
+     j <- 0 à v2.taille - 1 faire
+     ps <- v1[i] * v2[j]
+        si ps = 0
+            ecrire "les deux vecteurs sont orthogonaux"
+        sinon
+            ecrire "les deux vecteurs ne sont pas"
+        fin si
+     i++ et j++
+fin pour
